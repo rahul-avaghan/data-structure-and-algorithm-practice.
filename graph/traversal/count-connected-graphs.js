@@ -21,9 +21,9 @@ const graph = {
   }
   
   function discover(graph,node, visited, count) {
-    if(visited.has(node)) return false;
+    if(visited.has(String(node))) return false;
   
-    visited.add(node);
+    visited.add(String(node));
     for(const neighbor of graph[node]){
       discover(graph,neighbor,visited, count)
     }
