@@ -166,6 +166,42 @@ public class Tree {
 
     }
 
+    public boolean isBalanced(Node node) {
+        if (node == null) {
+            return true;
+        }
+
+        int lh = this.heightCounter(node.getLeft());
+        int lr = this.heightCounter(node.getRight());
+
+        if (Math.abs(lh - lr) <= 1 && isBalanced(node.getLeft()) && isBalanced(node.getRight())) {
+            return true;
+        }
+        return false;
+
+    }
+
+    public void zigZagTraversal() {
+        if (this.root == null) {
+            return;
+        }
+
+        var queue = new LinkedList<Node>();
+        queue.add(this.root);
+
+        while (!queue.isEmpty()) {
+            Node visitedNode = queue.poll();
+            System.out.print(visitedNode.getData() + " ,");
+            if (visitedNode.getRight() != null) {
+                queue.add(visitedNode.getRight());
+            }
+            if (visitedNode.getLeft() != null) {
+                queue.add(visitedNode.getLeft());
+            }
+
+        }
+    }
+
     public int height() {
         var height = this.heightCounter(this.root);
         System.out.println(height);
@@ -241,7 +277,7 @@ public class Tree {
                 current = current.getLeft();
             } else {
                 current = stack.pop();
-                if(current.getLeft() == null && current.getRight() == null){
+                if (current.getLeft() == null && current.getRight() == null) {
                     System.out.print(current.getData() + " ,");
                 }
                 current = current.getRight();

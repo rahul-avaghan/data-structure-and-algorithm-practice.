@@ -4,6 +4,7 @@ public class AllTree {
 
         int[] input = { 1, 2, 3, 4, 5, 6, 7 };
         var tree = new Tree(input);
+        System.out.println(tree.isBalanced(tree.getRoot())) ;
         //System.out.println("Right view ---------");
 
         // tree.printRightView();
@@ -13,7 +14,7 @@ public class AllTree {
         // System.out.println();
 
         // System.out.println("Bottom view ---------");
-         tree.printBottomView();
+        // tree.printBottomView();
         
          //tree.inOrderIteration();
         // tree.preOrderIteration();
