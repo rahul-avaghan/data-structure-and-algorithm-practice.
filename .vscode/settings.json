@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "graph/recursion",
-        "graph/tree"
+        "array",
+        "backtracking"
     ]
 }
