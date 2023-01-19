@@ -5,7 +5,9 @@ public class TwoSum {
 
     public static void main(String[] args) {
         int input[] = { 1, 4, 7, 8, 10 };
-        System.out.println(Arrays.toString(twoSum(input, 11)));
+        System.out.println(Arrays.toString(twoSum(input, 15)));
+        System.out.println(Arrays.toString(twoPointerApproach(input, 15)));
+
         ;
     }
 
@@ -26,6 +28,30 @@ public class TwoSum {
         }
         return new int[0];
 
+    }
+
+    // 11
+    private static int[] twoPointerApproach(int[] input, int sum) {
+        // This is applicable for a sorted array
+        int low = 0, high = input.length - 1;
+        // 2,3,4,5,6,7
+        while (low < high) {
+
+            if (input[low] + input[high] == sum) {
+                return new int[] { input[low], input[high] };
+            }
+
+            var difference = sum - input[low];
+            // else if(store[left]+store[right]>target)
+
+            if (difference < input[high]) {
+                high--;
+            } else {
+                low++;
+            }
+
+        }
+        return new int[] {};
     }
 
 }
