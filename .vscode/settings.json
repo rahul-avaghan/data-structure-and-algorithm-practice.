@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "sdesheet/array",
         "graph/recursion",
         "backtracking",
         "array",
-        "sdesheet/array"
+        "sdesheet/strings"
     ]
 }
