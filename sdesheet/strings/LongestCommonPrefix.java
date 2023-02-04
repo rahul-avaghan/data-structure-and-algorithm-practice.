@@ -31,5 +31,10 @@ public class LongestCommonPrefix {
 
         System.out.println(" Common prefix is " + prefix.toString());
 
+
+        // aproach 2
+
+        
+
     }
 }
