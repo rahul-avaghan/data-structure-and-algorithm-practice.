@@ -4,6 +4,8 @@
         "graph/recursion",
         "backtracking",
         "array",
-        "sdesheet/strings"
+        "sdesheet/strings",
+        "sdesheet/linkedlist",
+        "utils"
     ]
 }
