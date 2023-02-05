@@ -14,12 +14,24 @@ public class LinkedUtilList {
         return prev;
     }
 
+    public static Node toList(int[] array) {
+        Node head = new Node();
+
+        head.val = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            head.insertNode(head, array[i]);
+        }
+
+        return head;
+    }
+
     public static void printList(Node l1) {
 
         var current = l1;
-        while (current.next != null) {
+        while (current != null) {
             System.out.print(current.val + "--> ");
-            current =  current.next;
+            current = current.next;
         }
     }
 

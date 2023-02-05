@@ -12,7 +12,6 @@ public class NaturalNumber {
             return input;
         }
         return naturalNumberSum(input - 1) + input;
-       
     }
 }
 
