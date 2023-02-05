@@ -1,8 +1,16 @@
 public class ReverseLinkedList {
     
-    public static void main(String[] args) {
-        
-        Node[] list = new 
+    public Node reverseLinkedList(Node head) {
 
+        Node prev = null;
+        Node current = head;
+
+        while (current != null) {
+            Node next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
     }
 }
