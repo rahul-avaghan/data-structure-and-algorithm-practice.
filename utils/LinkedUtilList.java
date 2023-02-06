@@ -49,6 +49,32 @@ public class LinkedUtilList {
         }
     }
 
+    // 1,2,3,4 fast.next.next != null
+    // 1,2,3 fast.next != null
+    public static Node MiddleNode(Node head) {
+        Node slow = head;
+        Node fast = head;
+
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public static Node reverse(Node head) {
+        Node current = head;
+        Node prev =  null;
+        while(current != null) {
+
+            Node next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+    }
+
     public static NodePair searchNodePair(Node t1, Node t2, Node head) {
 
         var current = head;

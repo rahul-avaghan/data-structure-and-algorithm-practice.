@@ -1,6 +1,6 @@
 public class ReverseLinkedList {
     
-    public Node reverseLinkedList(Node head) {
+    public static Node reverseLinkedList(Node head) {
 
         Node prev = null;
         Node current = head;
