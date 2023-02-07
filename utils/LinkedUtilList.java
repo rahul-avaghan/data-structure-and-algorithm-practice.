@@ -93,6 +93,20 @@ public class LinkedUtilList {
         return new NodePair(t1, t2, prevt1, prevt2);
     }
 
+    static void createCycle(Node head,int pos) {
+        Node ptr = head;
+        Node temp = head;
+        int cnt = 0;
+        while(temp.next != null) {
+            if(cnt != pos) {
+                ++cnt;
+                ptr = ptr.next;
+            } 
+            temp = temp.next;
+        }
+        temp.next = ptr;
+    }
+
     public static void swap(Node t1, Node t2, Node prevt1, Node prevt2, Node head) {
 
         if (t1 == t2) {

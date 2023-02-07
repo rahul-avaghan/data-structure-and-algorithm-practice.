@@ -1,5 +1,4 @@
 import java.util.HashSet;
-import java.util.Hashtable;
 
 public class DetectCycle {
 
