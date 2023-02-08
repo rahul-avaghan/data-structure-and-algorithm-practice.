@@ -33,6 +33,7 @@ public class LinkedUtilList {
             System.out.print(current.val + "--> ");
             current = current.next;
         }
+        System.out.println();
     }
 
     public static class NodePair {
