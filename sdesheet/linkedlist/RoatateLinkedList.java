@@ -5,6 +5,8 @@ public class RoatateLinkedList {
         LinkedUtilList.printList(head);
         head = rotateLinkedListOptimised(head, 2);
         LinkedUtilList.printList(head);
+        head = rotateLinkedList(head, 2);
+        LinkedUtilList.printList(head);
 
     }
 
