@@ -1,11 +1,12 @@
 {
     "java.project.sourcePaths": [
+        "utils",
+        "sdesheet/strings",
+        "sdesheet/linkedlist",
         "sdesheet/array",
         "graph/recursion",
         "backtracking",
         "array",
-        "sdesheet/strings",
-        "sdesheet/linkedlist",
-        "utils"
+        "Greedy"
     ]
 }
